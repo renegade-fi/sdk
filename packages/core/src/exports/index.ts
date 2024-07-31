@@ -3,22 +3,32 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 export {
-  type CancelOrderParameters,
-  type CancelOrderReturnType,
-  cancelOrder,
-} from '../actions/cancelOrder.js'
+  type CancelOrderRequestErrorType,
+  type CancelOrderRequestParameters,
+  type CancelOrderRequestReturnType,
+  cancelOrderRequest,
+} from '../actions/cancelOrderRequest.js'
 
 export {
+  type ConnectErrorType,
   type ConnectParameters,
   type ConnectReturnType,
   connect,
 } from '../actions/connect.js'
 
 export {
+  type CreateOrderErrorType,
   type CreateOrderParameters,
   type CreateOrderReturnType,
   createOrder,
 } from '../actions/createOrder.js'
+
+export {
+  type CreateOrderRequestErrorType,
+  type CreateOrderRequestParameters,
+  type CreateOrderRequestReturnType,
+  createOrderRequest,
+} from '../actions/createOrderRequest.js'
 
 export {
   type CreateWalletReturnType,
@@ -30,6 +40,14 @@ export {
   type DepositReturnType,
   deposit,
 } from '../actions/deposit.js'
+
+export {
+  type DepositRequestErrorType,
+  type DepositRequestParameters,
+  type DepositRequestReturnType,
+  depositRequest,
+} from '../actions/depositRequest.js'
+
 
 export {
   type DisconnectReturnType,
@@ -129,7 +147,7 @@ export {
   lookupWallet,
 } from '../actions/lookupWallet.js'
 
-export { type PayFeesReturnType, payFees } from '../actions/payFees.js'
+export { type PayFeesReturnType, type PayFeesErrorType, payFees } from '../actions/payFees.js'
 
 export {
   type SignMessageParameters,
@@ -165,6 +183,13 @@ export {
   type WithdrawReturnType,
   withdraw,
 } from '../actions/withdraw.js'
+
+export {
+  type WithdrawRequestErrorType,
+  type WithdrawRequestParameters,
+  type WithdrawRequestReturnType,
+  withdrawRequest,
+} from '../actions/withdrawRequest.js'
 
 ////////////////////////////////////////////////////////////////////////////////
 // Constants
@@ -214,8 +239,19 @@ export { BaseError } from '../errors/base.js'
 export { Token } from '../types/token.js'
 export * from '../types/wallet.js'
 export * from '../types/order.js'
-export * from '../types/utils.js'
 export * from '../types/task.js'
+
+export {
+  type Evaluate,
+  type ExactPartial,
+  type Mutable,
+  type StrictOmit as Omit,
+  type OneOf,
+  type RemoveUndefined,
+  type UnionCompute,
+  type UnionStrictOmit,
+  type UnionExactPartial,
+} from '../types/utils.js'
 
 ////////////////////////////////////////////////////////////////////////////////
 // Utils
@@ -235,4 +271,4 @@ export { postRelayerRaw } from '../utils/http.js'
 
 export { WebSocketManager } from '../utils/websocket.js'
 
-export { parseBigJSON } from '../utils/bigJSON.js'
+export { parseBigJSON, stringifyForWasm } from '../utils/bigJSON.js'

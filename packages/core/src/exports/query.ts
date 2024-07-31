@@ -3,6 +3,38 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 export {
+  type CancelOrderRequestData,
+  type CancelOrderRequestVariables,
+  type CancelOrderRequestMutate,
+  type CancelOrderRequestMutateAsync,
+  cancelOrderRequestMutationOptions,
+} from '../query/cancelOrderRequest.js'
+
+export {
+  type ConnectData,
+  type ConnectVariables,
+  type ConnectMutate,
+  type ConnectMutateAsync,
+  connectMutationOptions,
+} from '../query/connect.js'
+
+export {
+  type CreateOrderRequestData,
+  type CreateOrderRequestVariables,
+  type CreateOrderRequestMutate,
+  type CreateOrderRequestMutateAsync,
+  createOrderRequestMutationOptions,
+} from '../query/createOrderRequest.js'
+
+export {
+  type DepositRequestData,
+  type DepositRequestVariables,
+  type DepositRequestMutate,
+  type DepositRequestMutateAsync,
+  depositRequestMutationOptions,
+} from '../query/depositRequest.js'
+
+export {
   type GetBackOfQueueWalletData,
   type GetBackOfQueueWalletOptions,
   type GetBackOfQueueWalletQueryFnData,
@@ -75,3 +107,19 @@ export {
   getOpenOrdersQueryKey,
   getOpenOrdersQueryOptions,
 } from '../query/getOpenOrders.js'
+
+export {
+  type PayFeesRequestData,
+  type PayFeesRequestVariables,
+  type PayFeesRequestMutate,
+  type PayFeesRequestMutateAsync,
+  payFeesRequestMutationOptions,
+} from '../query/payFeesRequest.js'
+
+export {
+  type WithdrawRequestData,
+  type WithdrawRequestVariables,
+  type WithdrawRequestMutate,
+  type WithdrawRequestMutateAsync,
+  withdrawRequestMutationOptions,
+} from '../query/withdrawRequest.js'

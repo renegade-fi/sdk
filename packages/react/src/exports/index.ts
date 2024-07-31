@@ -62,6 +62,30 @@ export {
 } from '../hooks/useConfig.js'
 
 export {
+  useCancelOrder,
+  type UseCancelOrderParameters,
+  type UseCancelOrderReturnType,
+} from '../hooks/useCancelOrder.js'
+
+export {
+  useCreateOrder,
+  type UseCreateOrderParameters,
+  type UseCreateOrderReturnType,
+} from '../hooks/useCreateOrder.js'
+
+export {
+  useConnect,
+  type UseConnectParameters,
+  type UseConnectReturnType,
+} from '../hooks/useConnect.js'
+
+export {
+  useDeposit,
+  type UseDepositParameters,
+  type UseDepositReturnType,
+} from '../hooks/useDeposit.js'
+
+export {
   useFees,
   type UseFeesParameters,
   type UseFeesReturnType,
@@ -109,10 +133,22 @@ export {
 } from '../hooks/useOrderMetadata.js'
 
 export {
+  usePayFees,
+  type UsePayFeesParameters,
+  type UsePayFeesReturnType,
+} from '../hooks/usePayFees.js'
+
+export {
   usePing,
   type UsePingParameters,
   type UsePingReturnType,
 } from '../hooks/usePing.js'
+
+export {
+  usePkRootScalars,
+  type UsePkRootParameters,
+  type UsePkRootScalarsReturnType,
+} from '../hooks/usePkRootScalars.js'
 
 export {
   useNetworkOrders,
@@ -150,6 +186,13 @@ export {
 
 export { useWallet } from '../hooks/useWallet.js'
 
+export {
+  useWithdraw,
+  type UseWithdrawParameters,
+  type UseWithdrawReturnType,
+} from '../hooks/useWithdraw.js'
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // @renegade/core
 ////////////////////////////////////////////////////////////////////////////////
@@ -183,6 +226,7 @@ export {
   cookieToInitialState,
   deepEqual,
   parseCookie,
+  stringifyForWasm,
   // Types
   OrderState,
   TaskType,
