@@ -26,7 +26,11 @@ export async function createOrder(
   parameters: CreateOrderParameters,
 ): Promise<CreateOrderReturnType> {
   const { id = '', base, quote, side, amount, worstCasePrice } = parameters
-  const { getRelayerBaseUrl, utils, state: { seed } } = config
+  const {
+    getRelayerBaseUrl,
+    utils,
+    state: { seed },
+  } = config
   invariant(seed, 'Seed is required')
 
   const walletId = getWalletId(config)

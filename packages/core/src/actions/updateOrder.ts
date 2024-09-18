@@ -23,7 +23,11 @@ export async function updateOrder(
   parameters: UpdateOrderParameters,
 ): UpdateOrderReturnType {
   const { id = '', base, quote, side, amount, worstCasePrice } = parameters
-  const { getRelayerBaseUrl, utils, state: { seed } } = config
+  const {
+    getRelayerBaseUrl,
+    utils,
+    state: { seed },
+  } = config
   invariant(seed, 'Seed is required')
 
   const walletId = getWalletId(config)

@@ -19,8 +19,20 @@ export async function createOrderInMatchingPool(
   config: Config,
   parameters: CreateOrderInMatchingPoolParameters,
 ): Promise<CreateOrderReturnType> {
-  const { id = '', base, quote, side, amount, worstCasePrice, matchingPool } = parameters
-  const { getRelayerBaseUrl, utils, state: { seed } } = config
+  const {
+    id = '',
+    base,
+    quote,
+    side,
+    amount,
+    worstCasePrice,
+    matchingPool,
+  } = parameters
+  const {
+    getRelayerBaseUrl,
+    utils,
+    state: { seed },
+  } = config
   invariant(seed, 'Seed is required')
 
   const walletId = getWalletId(config)
